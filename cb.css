@@ -1,0 +1,839 @@
+
+/*--------------------------Início-Estilo Geral--------------------------------*/
+*{
+    /*excluir a margem, preenchimento e espaçamento para todas as tags(body,header,footer)*/
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: monospace;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000000;
+    height: 100vh;
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+/*-------------------------Fim-Estilo Geral--------------------------*/
+
+/*------------------------Início-Estilo Header----------------------*/
+header{
+    padding: 20px 4%;
+    background-color: rgb(163, 11, 186);
+}
+header > .interface{
+    display: flex;
+    align-items:right;
+    justify-content: space-between;
+}
+header nav ul{
+    list-style-type:none;/*serve para remover os pontos em frente a lista*/
+}
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 7px 10px;/*preenchimento 0(cima e a baixo) 40px(laterais)ou esquerda e direita*/ 
+}
+.menu-desktop {
+    margin-left: 400px;
+}
+header a{
+    color: #000000;
+    text-decoration: none;/*para remover o sublinhado*/
+    font-size: 20px;
+    display: inline-block;
+    transition: 1.03s;      
+}
+header a:hover{
+    color: #ffffff;
+    transform: scale(1.05);   
+}
+#logo{
+    font-size: 40px;
+    transition: 2s;
+}
+#logo:hover{
+    color:#000000;
+    transform: scale(1.3);
+}
+
+header .btn-contacto button{
+    padding: 10px 40px;
+    font-size: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 700;/*negrito*/
+    border: 0;/*remover as bordas*/
+    border-radius: 30px;
+    cursor: pointer;/*tornar o curso o dedo indicador*/
+    margin-left: 27px;
+}
+header .btn-contacto button:hover{
+    box-shadow:0px 0px 8px #000000;/*0px-vertical(cima,baixo), 0px-latera(esquerda,direita) 8px-espalhamento de sombra, cor-Preta (#000000)*/
+}
+
+.contactar button{
+    margin-top: 40px;
+    padding: 10px 40px;
+    font-size: 20px;
+    background-color: rgb(163, 11, 186);
+    color: #ffffff;
+    font-weight: 700;/*negrito*/
+    border: 0;/*remover as bordas*/
+    border-radius: 30px;
+    cursor: pointer;/*tornar o curso o dedo indicador*/
+    transition: 1.05s;   
+}
+.contactar button:hover{
+    box-shadow: 0px 0px 8px rgb(163, 11, 186);
+    transform: scale(1.05);
+}
+/*---------------------------Fim-Estilo Header---------------------*/
+.menu-mobile li a{
+    display: none;     
+}
+.menu-mobile .btn-fechar {
+    opacity: 0;
+}
+.btn-menu-abrir {
+    opacity: 0;
+}
+
+.efeito-txt-topo, .efeito-img-topo{
+    visibility: hidden;
+}
+.efeito-servicos1, .efeito-servicos2, .efeito-servicos3{
+    visibility: hidden;    
+}
+.titulo-servico{
+    visibility:hidden,
+}
+.trabalho-cientifico1, .trabalho-cientifico2{
+    visibility:hidden;
+}
+.img-funcionario1, .efeito-funcionario1, .img-funcionario2, .efeito-funcionario2, .img-funcionario3, .efeito-funcionario3{
+    visibility:hidden;
+}
+.connosco1, .connosco2, .connosco3, .connosco4, .connosco5, .connosco6{
+    visibility:hidden;
+}
+.efeito-rodape, .efeito-link, .efeito-icon-link1, .efeito-icon-link2, .efeito-icon-link3{
+        visibility:hidden;
+}
+
+/*----------------------------Início-Topo do Site-----------------------------*/
+section.topo-do-site{
+    padding: 40px 4%;
+}
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo-do-site h1{
+    color: #ffffff;
+    font-size:65px;
+    line-height:140px;
+    font-family:monospace;
+}
+.topo-do-site .txt-topo-site h1 span{
+    color:rgb(163, 11, 186); 
+}
+.topo-do-site p{
+    color: #ffffff;
+    font-size:25px;
+    font-family:monospace;
+    line-height: 33px; 
+}
+.topo-do-site .txt-topo-site p span{
+    color:rgb(163, 11, 186);
+}
+
+.topo-do-site .img-topo-site img{
+    position:relative;
+    animation:flutuar 1.08s ease-in-out infinite alternate;
+}
+@keyframes flutuar{
+    0%{
+        top:0;
+    }
+    100%{
+        top:30px;
+    }
+}
+/*----------------------------Fim-Topo do Site-----------------------------*/
+
+/*----------------------------Início- Outrosserviços-----------------------------*/
+h2.titulo{
+    color: #ffffff;
+    font-size: 44px;
+    font-weight: 600;
+    text-align: center;   
+}
+
+h2.titulo span{
+    color: rgb(163, 11, 186);
+}
+
+section.outrosservicos{
+    padding: 40px 4%;
+}
+
+section.outrosservicos .flex{
+    gap:60px;
+    align-items:center;
+}
+
+.outrosservicos .outrosservicos-box{
+    padding:30px;
+    color: #ffffff;
+    border: 2px solid rgb(163, 11, 186);
+    margin-top: 50px;
+    border-radius: 20px;
+    transition: .2s; 
+}
+
+.outrosservicos .outrosservicos-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgb(163, 11, 186);
+}
+
+.outrosservicos .outrosservicos-box i{
+    color:rgb(163, 11, 186);
+    font-size:130px;
+}
+.outrosservicos-box .bi{
+    margin-left: 90px;
+}
+
+
+.outrosservicos .outrosservicos-box h3{
+    font-size:35px;
+    margin:15px 4%;
+    text-align:center;
+}
+.outrosservicos .outrosservicos-box p{
+    text-align:center;
+    font-size: 18px;
+    }
+
+.tresD1{
+    width:300px;
+    background-color: rgb(163, 11, 186);
+    border-radius: 15px;
+}
+/*----------------------------Fim- Outrosserviços-----------------------------*/
+
+/*----------------------------Início- flyer-----------------------------*/
+section.flyer{
+    padding: 50px 4%;
+    background-image:url(fundoflyer.png);
+    box-shadow: inset 6px 6px 13px 0px #000000db;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 80px;
+    justify-content: center; 
+}
+
+section.flyer .flyerhp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TituloDesign span{
+    color: rgb(163, 11, 186);
+}
+
+.TituloDesign{
+    position: relative;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 45px;
+    border:3px solid #ffffff;
+    border-radius:15px;
+    padding: 5px 4px;
+    animation:flutuarDesign 1.08s ease-in-out infinite alternate;
+    background-color: #00000084;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+@keyframes flutuarDesign{
+    0%{
+        left:0;
+    }
+    100%{
+        left:30px;
+    }
+}
+
+.ConteudoDesign p{
+     color: #ffffff;
+     font-size: 25px;
+     line-height: 40px;
+     text-align: justify;
+     background-color: #00000043;
+     text-shadow: 1px 1px 0px #000000;
+}
+section.flyer .flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_flyer .img_flyers{
+    margin-top: 40px;
+    width: 200px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: 1.09s;
+}
+
+.img_flyer .img_flyers:hover{
+    transform: scale(1.3);
+}
+/*----------------------------Fim-flyer-----------------------------*/
+
+/*----------------------------Início-Preço-----------------------------*/
+section.nossopreco{
+    padding:200px 4%;
+    background-color: rgb(163, 11, 186);
+    box-shadow:0 0 40px 6px rgb(163, 11, 186);
+}
+
+section.nossopreco .interface .flex{
+    gap: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.preco h1{
+    color:white;
+    font-size: 60px;
+    font-family:'Lucida Sans';
+}
+.preco p{
+    font-size: 25px;
+    font-family:'Lucida Sans';
+}
+.preco span{
+    color:#fff;
+    font-family:'Lucida Sans';
+}
+.img-topo-site3 img{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+/*----------------------------Fim-Preço-----------------------------*/
+
+
+/*----------------------------Início-Trabalhoescolar-----------------------------*/
+section.trabalhoescolares{
+    padding: 150px 4%;
+}
+section.trabalhoescolares .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+section.trabalhoescolares .trabalhoescolar h1{
+    font-size:50px;
+    color: #ffffff;
+    line-height: 98px;
+}
+section .trabalhoescolar p{
+    text-align: left;
+    font-size: 25px;
+    color: #ffffff; 
+}
+section .trabalhoescolar span{
+    color: rgb(163, 11, 186);
+}
+.img-topo-site2 img{
+    width:50rem;
+}
+/*----------------------------Fim -Trabalhoescolar-----------------------------*/
+/*------------------------------------Início-Galeria--------------------------------*/
+
+section.galeria{
+    padding: 120px 4%;
+}
+section.galeria .galeriatitulo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.galeria1 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:35px;
+    gap: 80px;  
+}
+
+.tituloG{
+    color:white;
+    font-size:60px;
+}
+.tituloG span{
+    color:rgb(163, 11, 186);
+}
+.videotamanho{
+    border:10px solid rgb(163, 11, 186);
+    border-radius:50px; 
+}
+/*------------------------------------Fim-Galeria--------------------------------*/
+
+/*----------------------------Início - sobre-----------------------------*/
+section.sobre{
+    padding: 70px 4%;
+    box-shadow: 0 0 40px 5px rgb(163, 11, 186);
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.sobre .txt-sobre{
+    color: #ffffff;
+    line-height: 35px;
+}
+.sobre .txt-sobre h2{
+    font-size: 35px;
+}
+
+.sobre .txt-sobre p{
+    font-size: 20px;
+}
+.sobre .txt-sobre .prazer{
+    font-weight: 600;
+}
+.sobre .txt-sobre span{
+    color: rgb(163, 11, 186);
+}
+.sobre .txt-sobre .bi1{
+    color:#2251b7;
+}
+.sobre .txt-sobre .bi2{
+    color:#22b722;
+}
+.sobre .txt-sobre .bi3{
+    color:#d23500;
+}
+.sobre .txt-sobre .bi4{
+    color:#d29000;
+}
+.sobre .txt-sobre .bi5{
+    color:#d29000;
+}
+.sobre .txt-sobre .bi6{
+    color:#d23500;
+}
+.sobre .txt-sobre .bi7{
+    color:#2251b7;
+}
+.bifone{
+    color:rgb(163, 11, 186);
+}
+/*----------------------------Fim - sobre-----------------------------*/
+
+/*----------------------------Inicio - Formulário-----------------------------*/
+section.formulario{
+    padding: 120px 4%; 
+}
+
+form{
+    max-width: 500px;
+    margin: 30 auto;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    gap: 10px;
+}
+form input{
+    width: 100%;
+    background-color: #343333fc;
+    border: 0;
+    outline: 0;
+    padding:20px 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: #ffffff;
+}
+form input::placeholder{
+    color: rgb(163, 11, 186);   
+}
+textarea{
+    background-color: #343333fc;
+    border: 0;
+    outline: 0;
+    padding:20px 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    resize: none;
+    max-height: 200px;
+    color: #ffffff;
+    font-weight: 800px;
+}
+textarea::placeholder{
+    color: rgb(163, 11, 186);
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: right;
+}
+form .btn-enviar input{
+    width: 120px;
+    background-color:rgb(163, 11, 186);
+    color: #ffffff;
+    transition: 1.05s;
+    cursor: pointer;
+}
+form .btn-enviar input:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px rgb(163, 11, 186);
+}
+/*----------------------------Fim - Formulário-----------------------------*/
+
+
+/*----------------------------Início - Rodapé-----------------------------*/
+footer{
+    padding: 60px 4%;   
+    box-shadow: 0 0 40px 5px rgb(163, 11, 186); 
+}
+footer .flex{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap:350px;
+}
+.btn-social button{
+    justify-content: space-between;
+    border: none;
+    margin: 0 -2px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    background-color:rgb(163, 11, 186);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1.5s;
+}
+.btn-social button:hover{
+    transform: scale(.6);
+}
+.assinatura{
+    color: rgb(163, 11, 186);
+    font-size: 18px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#titulofooter{
+    font-size: 30px;
+    color: #ffffff;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#titulofooter span{
+    color:rgb(163, 11, 186);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+footer .bih{
+    font-size: 40px;
+    color:rgb(163, 11, 186);
+    transition: 1.5s;
+}
+footer .bih:hover{
+    transform: scale(2);
+}
+.bi10{
+    padding: 20px;
+    color: none;
+}
+a, button{
+    text-decoration:none;
+}
+
+.botaotopo{
+    color: white;
+    background-color:rgb(163, 11, 186);
+    padding: 20px;
+    border-radius: 80px;
+    font-size: 20px;
+    position:fixed;
+    right:10px;
+    bottom:10px;
+}
+/*----------------------------Fim - Rodapé-----------------------------*/
+@media screen and (max-width:1000px){
+    
+    /*CLASSES GERAIS*/
+    .flex{
+        flex-direction:column;
+    }
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+    /*CABEÇALHO*/
+    #logo{
+        color: #ffffff;
+    }
+    .menu-desktop, .btn-contacto {
+        display: none;
+    }
+    
+/*--------------------------Início-menu-mobile---------------------*/
+.menu-mobile{
+    background-color: rgba(163, 11, 186, 0.576);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right:0;
+    z-index: 99999;
+    width:0%;
+    overflow: hidden;
+    transition:.2s;   
+}
+/*--------------------INICIO-GALERIA-----------------------------*/
+section.galeria{
+    padding: 50px 4%;
+}
+section.galeria .galeriatitulo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.galeria1{
+    max-width: 700px;
+    flex-direction: column-reverse;
+}
+.videotamanho{
+    width:100%;
+    height: 56.25%;  
+}
+
+
+/*--------------------FIM-GALERIA-----------------------------*/
+.menu-mobile nav ul{
+    text-align: right;
+}
+.menu-mobile nav ul li a{
+    color:#ffffff;
+    font-size:30px;
+    font-weight: 300;
+    padding:20px 8%;
+    display:block;
+}
+.menu-mobile nav ul li a:hover{
+    background-color: #ffffff;
+    color:rgb(163, 11, 186);
+}
+.menu-mobile .btn-fechar{
+    padding:15px 4%;
+}
+.menu-mobile .btn-fechar i{
+    color:#ffffff;
+    font-size: 25px;
+}
+.menu-mobile.abrir-menu{
+    width:70%;
+}
+.btn-menu-abrir i{
+    color:#ffffff;
+    font-size:40px;
+}
+.menu-mobile .btn-fechar {
+    opacity: 1;
+}
+.btn-menu-abrir {
+    opacity: 1;
+}
+
+/*--------------------------------TOPO DO SITE----------------------------------*/
+    section.topo-do-site{
+        padding:20px 4%;
+    }
+    section.topo-do-site .flex{
+        gap: 30px;
+    }
+    .txt-topo-site{
+        padding: 20px;
+    }
+    .img-topo-site img{
+        width: 100%;
+    }
+    .txt-topo-site h1{
+        font-size:37px;
+        line-height: 80px;
+    }
+    .txt-topo-site p{
+        text-align:left; 
+        font-size:20px;      
+    }
+/*--------------------------------FIM DO SITE----------------------------------*/
+
+/*----------------------------Início-Outrosserviços-----------------------------*/
+    section.outrosservicos{
+        padding: 40px 8%;
+    }
+    section.outrosservicos .titulo{
+        font-size: 36px;
+    }  
+    .outrosservicos-box .bi{
+        margin-left: 84px;
+    }
+    .outrosservicos .outrosservicos-box i{
+        font-size:95px;
+    }
+    .outrosservicos .outrosservicos-box h3{
+        font-size:26px;
+    }
+    section.outrosservicos .flex{
+        gap:20px;
+        align-items:center;
+    }   
+    /*----------------------------Fim-Outrosserviços-----------------------------*/
+
+    /*---------------------------------Início-flyer-----------------------------*/
+    .img_flyer .img_flyers{
+        margin-top: 40px;
+        width: 53px;  
+    }
+    .TituloDesign{
+        font-size: 35px;
+    }
+    .ConteudoDesign p{
+        font-size: 20px;
+    }
+
+   /*--------------------------------Fim-flyer---------------------------------*/
+
+    /*---------------------------Início-trabalhoescolar--------------------------*/
+    .trabalhoescolar{
+        padding: 10px;
+    }
+    section.trabalhoescolares{
+        margin-top: -120px;
+    }
+    section.trabalhoescolares .trabalhoescolar h1{
+        font-size:30px;
+        line-height:70px;
+    }
+    section.trabalhoescolares .trabalhoescolar p{
+        font-size:20px;
+        
+    }
+    .txt-sobre #ant{
+        font-size:19px;
+    }
+    /*-----------------------------Fim-trabalhoescolar---------------------------*/
+    /*----------------------------Início-Preço-----------------------------*/
+section.nossopreco{
+    padding:100px 4%;
+    background-color: rgb(163, 11, 186);
+    box-shadow:0 0 40px 6px rgb(163, 11, 186);
+}
+
+section.nossopreco .interface .flex {
+    gap: 90px;
+    display: flex;
+    align-items: none;
+    justify-content: none;
+    flex-direction: column-reverse;
+    
+}
+
+.preco .precotexto{
+    display:flex;
+    font-weight: 800pt;
+    font-size: 30px;
+    color:rgb(255, 248, 248);
+    font-family:'Lucida Sans';
+    position:relative;
+    align-items: center;
+    justify-content:center;
+}
+.preco p{
+    margin-top: 20px;
+    font-size: 25px;
+    font-family:'Lucida Sans';
+}
+.preco span{
+    color:#fff;
+    font-family:'Lucida Sans';
+}
+.img-topo-site3 img{
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+}
+/*----------------------------Fim-Preço-----------------------------*/
+section.galeria{
+    padding: 150px 2%;
+}
+section.galeria .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+   /*---------------------------------Início-f-----------------------------*/
+    .ConteudoDesign p{
+    text-align: start;
+    padding: 10px;
+    }
+    .img-topo-site2 img{
+        width:28rem;
+    }
+    section.sobre{
+        padding: 80px 8%;
+    }
+    section.sobre .flex{
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    section.formulario{
+        padding: 90px 4%; 
+    }
+    section.formulario .titulo{
+        font-size: 40px;
+    }
+    footer{
+        padding: 30px 20%;
+    }
+    footer .flex{
+        display:flex;
+        gap:14px;
+    }
+    .btn-social button{       
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .bi10{
+        margin-left: -10px; 
+    }
+   
+    #titulofooter{
+        font-size: 20px;
+    }
+    .assinatura{
+        font-size: 14px;
+    }
+    
+}
+
+
+
+
